@@ -84,7 +84,7 @@ button:hover{
 
 <body>
 
-<audio autoplay loop>
+<audio id="music" loop>
 <source src="sound.mp4" type="audio/mp4">
 </audio>
 
@@ -100,7 +100,7 @@ button:hover{
 उस प्यार का जश्न जो हमारे परिवार की नींव है।
 </p>
 
-<button onclick="showMessage()">संदेश देखने के लिए क्लिक करें 💌</button>
+<button onclick="startSurprise()">संदेश देखने के लिए क्लिक करें 💌</button>
 
 <p id="message">
 मम्मी और पापा ❤️<br><br>
@@ -136,8 +136,13 @@ document.getElementById("photo").src = photos[index]
 
 },2500)
 
-function showMessage(){
+function startSurprise(){
+
 document.getElementById("message").style.display="block"
+
+let music = document.getElementById("music")
+music.play()
+
 }
 
 for(let i=0;i<30;i++){
